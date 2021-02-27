@@ -7,6 +7,6 @@ module = "napari_video"
 author = "Jan Clemens"
 author-email = "clemensjan@googlemail.com"
 home-page = "https://github.com/postpop/napari_video"
-classifiers = ["License :: OSI Approved :: MIT License"]
+classifiers = ["License :: OSI Approved :: MIT License", "Framework :: napari"]
 description-file = "README.md"
 
