@@ -4,7 +4,7 @@ from napari_plugin_engine import napari_hook_implementation
 
 class VideoReaderNP(VideoReader):
     """VideoReader posing as numpy array."""
-    
+
     def __init__(self, filename: str, remove_leading_singleton: bool = False):
         super().__init__(filename)
         self.remove_leading_singleton = remove_leading_singleton
@@ -22,27 +22,28 @@ class VideoReaderNP(VideoReader):
         elif isinstance(index, tuple):  # unpack tuple of indices
             if isinstance(index[0], slice):
                 indices = range(*index[0].indices(len(self)))
-            elif isinstance(index[0], (np.intp, int)):
+            elif isinstance(index[0], (np.integer, int)):
                 indices = int(index[0])
             else:
                 indices = None
 
             if indices is not None:
                 frames = self[indices]
-                
+
                 # index into pixels and channels
-                for cnt, idx in enumerate(index[1:]): 
+                for cnt, idx in enumerate(index[1:]):
                     if isinstance(idx, slice):
                         ix = range(*idx.indices(self.shape[cnt+1]))
                     elif isinstance(idx, int):
                         ix = range(idx-1, idx)
-                        
+
                     if frames.ndim==4: # ugly indexing from the back (-1,-2 etc)
                         cnt = cnt+1
                     frames = np.take(frames, ix, axis=cnt)
-                    
-        if self.remove_leading_singleton and frames.shape[0] == 1:
-            frames = frames[0]
+
+        if self.remove_leading_singleton and frames is not None:
+            if frames.shape[0] == 1:
+                frames = frames[0]
         return frames
 
     @property
