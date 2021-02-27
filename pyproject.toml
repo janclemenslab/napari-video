@@ -10,6 +10,5 @@ home-page = "https://github.com/postpop/napari_video"
 classifiers = ["License :: OSI Approved :: MIT License", "Framework :: napari"]
 description-file = "README.md"
 
-[options.entry_points]
-napari.plugin =["video = napari_video.napari_video"]
-
+[tool.flit.entrypoints."napari.plugin"]
+video = "napari_video.napari_video"
