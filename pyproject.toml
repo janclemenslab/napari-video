@@ -11,6 +11,5 @@ classifiers = ["License :: OSI Approved :: MIT License", "Framework :: napari"]
 description-file = "README.md"
 
 [options.entry_points]
-napari.plugin =
-    napari-video = napari_video.napari_video
+napari.plugin =["video = napari_video.napari_video"]
 
