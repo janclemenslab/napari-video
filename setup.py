@@ -42,5 +42,5 @@ setup(name='napari_video',
       install_requires=['numpy', 'pyvideoreader'],
       include_package_data=True,
       zip_safe=False,
-      entry_points={'napari.plugin': 'plugin_name = napari_video.napari_video'},
+      entry_points={'napari.plugin': 'video = napari_video.napari_video'},
      )
