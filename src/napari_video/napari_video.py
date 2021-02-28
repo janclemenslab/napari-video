@@ -1,11 +1,13 @@
 import numpy as np
 from videoreader import VideoReader
 from napari_plugin_engine import napari_hook_implementation
+from dask import delayed
+
 
 class VideoReaderNP(VideoReader):
     """VideoReader posing as numpy array."""
 
-    def __init__(self, filename: str, remove_leading_singleton: bool = False):
+    def __init__(self, filename: str, remove_leading_singleton: bool = True):
         super().__init__(filename)
         self.remove_leading_singleton = remove_leading_singleton
 
@@ -36,6 +38,8 @@ class VideoReaderNP(VideoReader):
                         ix = range(*idx.indices(self.shape[cnt+1]))
                     elif isinstance(idx, int):
                         ix = range(idx-1, idx)
+                    else:
+                        continue
 
                     if frames.ndim==4: # ugly indexing from the back (-1,-2 etc)
                         cnt = cnt+1
