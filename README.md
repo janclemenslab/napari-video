@@ -5,7 +5,7 @@ Relies on [pyvideoreader](https://pypi.org/project/pyvideoreader/) as a backend 
 
 ## Installation
 ```shell
-pip install napari[all] napari-video
+pip install napari[all] napari_video
 ```
 
 ## Usage
