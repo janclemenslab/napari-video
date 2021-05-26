@@ -126,13 +126,5 @@ fig*
 !/docs/
 !/*.toml
 !/.github
-src/*.egg-info/
-src/deepsongsegmenter.egg-info/PKG-INFO
-src/deepsongsegmenter.egg-info/SOURCES.txt
-src/deepsongsegmenter.egg-info/top_level.txt
 src/*.egg-info
-src/deepsongsegmenter.egg-info/dependency_links.txt
-src/deepsongsegmenter.egg-info/not-zip-safe
-src/deepsongsegmenter.egg-info/PKG-INFO
-src/deepsongsegmenter.egg-info/SOURCES.txt
-src/deepsongsegmenter.egg-info/top_level.txt
+
