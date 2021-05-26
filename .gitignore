@@ -116,10 +116,12 @@ fig*
 *.err
 *.out
 
+/tests/
+
+
 /*
 /*/
 !/src/
-!/tests/
 !/env/
 !/docs/
 !/*.toml

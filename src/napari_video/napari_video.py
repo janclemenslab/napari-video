@@ -9,6 +9,12 @@ class VideoReaderNP(VideoReader):
     """VideoReader posing as numpy array."""
 
     def __init__(self, filename: str, remove_leading_singleton: bool = True):
+        """
+
+        Args:
+            filename (str): filename of the video
+            remove_leading_singleton (bool, optional): Remove leading singleton dimension when returning single frames. Defaults to True.
+        """
         super().__init__(filename)
         self.remove_leading_singleton = remove_leading_singleton
 

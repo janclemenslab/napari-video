@@ -40,6 +40,6 @@ Then
 
 - `vr[100]` will return the 100th frame as a numpy array with shape `(902, 912, 3)`.
 - `vr[100:200:10]` will return 10 frames evenly spaced between frame number 100 and 200 (shape `(10, 902, 912, 3)`).
-- Note that by default, single-frame and slice indexing return 3D and 4D arrays, respectively. To consistently return 4D arrays, open the video with `remove_leading_singleton=True`. `vr[100]` will then return a `(1, 902, 912, 3)` array.
+- Note that by default, single-frame and slice indexing return 3D and 4D arrays, respectively. To consistently return 4D arrays, open the video with `remove_leading_singleton=False`. `vr[100]` will then return a `(1, 902, 912, 3)` array.
 - We can also request specific ROIs and channels. For instance, `vr[100:200:10,100:400,800:850,1]` will return an array with shape `(10, 300, 50, 1)`.
 
