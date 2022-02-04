@@ -1,7 +1,6 @@
 import numpy as np
 from videoreader import VideoReader
 from napari_plugin_engine import napari_hook_implementation
-from dask import delayed
 import cv2
 
 
