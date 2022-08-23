@@ -20,7 +20,7 @@ description-file = "README.md"
 video = "napari_video.napari_video"
 
 [tool.flit.metadata.urls]
-Bug Tracker = "https://github.com/janclemenslab/napari-video/issues"
-Documentation = "https://github.com/janclemenslab/napari-video/blob/main/README.md"
-Source Code = "https://github.com/janclemenslab/napari-video"
-User Support = "https://github.com/janclemenslab/napari-video/issues"
+"Bug Tracker" = "https://github.com/janclemenslab/napari-video/issues"
+"Documentation" = "https://github.com/janclemenslab/napari-video/blob/main/README.md"
+"Source Code" = "https://github.com/janclemenslab/napari-video"
+"User Support" = "https://github.com/janclemenslab/napari-video/issues"
