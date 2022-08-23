@@ -1,5 +1,5 @@
 # napari-video
-[![napari hub](https://img.shields.io/endpoint?url=https://api.napari-hub.org/shields/<your-plugin-name-here>)](https://napari-hub.org/plugins/napari_video)
+[![napari hub](https://img.shields.io/endpoint?url=https://api.napari-hub.org/shields/napari_video)](https://napari-hub.org/plugins/napari_video)
 
 Napari plugin for working with videos.
 
