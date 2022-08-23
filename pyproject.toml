@@ -7,10 +7,20 @@ module = "napari_video"
 author = "Jan Clemens"
 author-email = "clemensjan@googlemail.com"
 home-page = "https://github.com/janclemenslab/napari-video"
-classifiers = ["License :: OSI Approved :: MIT License", "Framework :: napari"]
+classifiers = [
+    "License :: OSI Approved :: MIT License",
+    "Framework :: napari",
+    "Operating System :: OS Independent",
+]
 requires-python = ">=3.6"
 requires = ['numpy', 'pyvideoreader']
 description-file = "README.md"
 
 [tool.flit.entrypoints."napari.plugin"]
 video = "napari_video.napari_video"
+
+[tool.flit.metadata.urls]
+Bug Tracker = "https://github.com/janclemenslab/napari-video/issues"
+Documentation = "https://github.com/janclemenslab/napari-video/blob/main/README.md"
+Source Code = "https://github.com/janclemenslab/napari-video"
+User Support = "https://github.com/janclemenslab/napari-video/issues"
