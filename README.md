@@ -1,4 +1,6 @@
 # napari-video
+[![napari hub](https://img.shields.io/endpoint?url=https://api.napari-hub.org/shields/<your-plugin-name-here>)](https://napari-hub.org/plugins/napari_video)
+
 Napari plugin for working with videos.
 
 Relies on [pyvideoreader](https://pypi.org/project/pyvideoreader/) as a backend which itself uses [opencv](https://opencv.org) for reading videos.
