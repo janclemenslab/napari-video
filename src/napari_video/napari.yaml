@@ -1,0 +1,11 @@
+name: napari_video
+display_name: video
+contributions:
+  commands:
+  - id: napari_video.get_reader
+    title: Read video files
+    python_name: napari_video.napari_video:napari_get_reader
+  readers:
+  - command: napari_video.get_reader
+    filename_patterns: ["*.mp4", "*.mov", "*.avi"]
+    accepts_directories: false
