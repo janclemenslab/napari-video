@@ -1,6 +1,5 @@
 import numpy as np
 from videoreader import VideoReader
-from napari_plugin_engine import napari_hook_implementation
 import cv2
 
 
@@ -85,7 +84,6 @@ def video_file_reader(path):
     return [(array, {'name': path}, 'image')]
 
 
-@napari_hook_implementation
 def napari_get_reader(path):
     # remember, path can be a list, so we check it's type first...
     if isinstance(path, str) and any([path.endswith(ext) for ext in [".mp4", ".mov", ".avi"]]):

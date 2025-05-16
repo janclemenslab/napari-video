@@ -16,8 +16,8 @@ requires-python = ">=3.6"
 requires = ['numpy', 'pyvideoreader']
 description-file = "README.md"
 
-[tool.flit.entrypoints."napari.plugin"]
-video = "napari_video.napari_video"
+[tool.flit.entrypoints."napari.manifest"]
+napari_video = "napari_video:napari.yaml"
 
 [tool.flit.metadata.urls]
 "Bug Tracker" = "https://github.com/janclemenslab/napari-video/issues"
