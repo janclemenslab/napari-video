@@ -115,7 +115,7 @@ res*
 fig*
 *.err
 *.out
-
+scratch
 /tests/
 
 
