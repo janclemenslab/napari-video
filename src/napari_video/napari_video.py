@@ -81,7 +81,6 @@ class VideoReaderNP(VideoReader):
 
 def video_file_reader(path):
     array = VideoReaderNP(path, remove_leading_singleton=False)
-    print(array.shape)
     return [(array, {"name": path}, "image")]
 
 
