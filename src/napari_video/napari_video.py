@@ -41,14 +41,14 @@ class VideoReaderNP(VideoReader):
                 # index into pixels and channels
                 for cnt, idx in enumerate(index[1:]):
                     if isinstance(idx, slice):
-                        ix = range(*idx.indices(self.shape[cnt+1]))
+                        ix = range(*idx.indices(self.shape[cnt + 1]))
                     elif isinstance(idx, int):
-                        ix = range(idx-1, idx)
+                        ix = range(idx - 1, idx)
                     else:
                         continue
 
-                    if frames.ndim==4: # ugly indexing from the back (-1,-2 etc)
-                        cnt = cnt+1
+                    if frames.ndim == 4:  # ugly indexing from the back (-1,-2 etc)
+                        cnt = cnt + 1
                     frames = np.take(frames, ix, axis=cnt)
 
         if self.remove_leading_singleton and frames is not None:
@@ -66,11 +66,11 @@ class VideoReaderNP(VideoReader):
 
     @property
     def ndim(self):
-        return len(self.shape)+1
+        return len(self.shape) + 1
 
     @property
     def size(self):
-        return np.product(self.shape)
+        return np.prod(self.shape)
 
     def min(self):
         return 0
@@ -80,8 +80,9 @@ class VideoReaderNP(VideoReader):
 
 
 def video_file_reader(path):
-    array = VideoReaderNP(path, remove_leading_singleton=True)
-    return [(array, {'name': path}, 'image')]
+    array = VideoReaderNP(path, remove_leading_singleton=False)
+    print(array.shape)
+    return [(array, {"name": path}, "image")]
 
 
 def napari_get_reader(path):
